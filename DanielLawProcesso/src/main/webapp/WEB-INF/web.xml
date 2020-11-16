@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>DanielLawProcesso</display-name>
+  <welcome-file-list>
+    <welcome-file>Index.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+  
+  <filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>br.com.lucaswagner.util.CORSFilter</filter-class>
+</filter>
+ 
+<filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+  
+  <!--  <filter>
+    <filter-name>CORS</filter-name>
+    <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+
+    <init-param>
+        <param-name>cors.allowOrigin</param-name>
+        <param-value>*</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.supportsCredentials</param-name>
+        <param-value>true</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.supportedHeaders</param-name>
+        <param-value>Accept, Origin, X-Requested-With, Content-Type, Last-Modified</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.supportedMethods</param-name>
+        <param-value>GET, POST, HEAD, OPTIONS</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+    <filter-name>CORS</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>-->
+
+  <servlet>
+    <description></description>
+    <display-name>ServletCadastroProcesso</display-name>
+    <servlet-name>ServletCadastroProcesso</servlet-name>
+    <servlet-class>br.com.lucaswagner.controller.ServletCadastroProcesso</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletCadastroProcesso</servlet-name>
+    <url-pattern>/ServletCadastroProcesso</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletBuscarProcesso</display-name>
+    <servlet-name>ServletBuscarProcesso</servlet-name>
+    <servlet-class>br.com.lucaswagner.controller.ServletBuscarProcesso</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletBuscarProcesso</servlet-name>
+    <url-pattern>/ServletBuscarProcesso</url-pattern>
+  </servlet-mapping>
+  
+
+</web-app>
